@@ -1,57 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Note Layout</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <section class="container ">
-        <div class="child title head">
-            <form id="btn">
-                <input class="input" id="ins"type="text" placeholder="Enter Title" name="text"><br/>
-                <input class="input" id="ins1" type="text" placeholder="Enter your Content" name="text1"><br/> 
-                <button id="button">Submit</button>
-            </form>
-        </div> 
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <div class="child title head">
+        <form id="btn">
+          <label>Title :
+          <input class="input input1" id="input-title" type="text" placeholder="Enter Title" name="text"/><br/></label>
+          <label>Content :
+          <input class="input" id="input-content" type="text" placeholder="Enter your Content" name="text1"/><br/></label>
+          <button id="button">Submit</button>
+        </form>
+      </div>
     </section>
-    <!-- <section>
-        <div class="container">
-            <div class="child" id="result">
-                <p id="result1"></p>
-                <p id="result2"></p>
-            </div>
-            <div class="child"></div>
-            <div class="child" ></div>
-            <div class="child"></div>
-            <div class="child"></div>
-           
-        </div>
-    </section>
-   
-    <section>
-        <div class="container">
-            <div class="child"></div>
-            <div class="child"></div>
-            <div class="child"></div>
-            <div class="child"></div>
-            <div class="child"></div>
-            
-        </div>
-    </section>
-        
-    <section>
-        <div class="container">
-            <div class="child"></div>
-            <div class="child"></div>
-            <div class="child"></div>
-            <div class="child"></div>
-            <div class="child"></div>
-           
-        </div>
-    </section> -->
+    
+
+    <section class="notes-preview"></section>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
