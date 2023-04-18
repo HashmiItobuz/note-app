@@ -9,12 +9,23 @@ const submit = document.getElementById("btn");
 let noteArray = [];
 submit.addEventListener("submit", function (e) {
   e.preventDefault();
-  // console.log(noteArray);
+  
+  // let date = new Date().toLocaleDateString();
+    let date = new Date();
 
-  noteArray.push({
+    let day = date.getDate();
+    let month = date.getMonth() + 1;
+    let year = date.getFullYear();
+
+    let currentDate =`${day}-${month}-${year}`;
+
+  const content = {
     title: inputTitle.value,
-    content: inputContent.value
-  });
+    content: inputContent.value,
+    todaysDate: currentDate
+  }
+
+  noteArray.push(content);
 
   showNotes();
 });
@@ -26,7 +37,8 @@ function showNotes() {
     let divElement = document.createElement("div");
     let titleText = noteArray[i].title;
     let contentText = noteArray[i].content;
-    divElement.innerHTML = `<h1>${titleText.toUpperCase()}</h1><hr><p>${contentText}</p>`;
+    let dateText =noteArray[i].todaysDate;
+    divElement.innerHTML = `<h3>${dateText}</h3><h1>${titleText.toUpperCase()}</h1><hr><p>${contentText}</p>`;
     notesPreview.appendChild(divElement);
     divElement.classList.add("box");
     inputTitle.value = "";
@@ -55,34 +67,3 @@ function showNotes() {
 
 
 
-//     for (let i = 1; i <= a; i++) {
-//         if (i % 2 != 0) {
-//             console.log(i);
-
-//             let divElement = document.createElement("div");
-//             // let childSpanElement = document.createElement("span");
-//             let text = document.createTextNode(noteArray.push(inp.value));
-//             // childSpanElement.innerText = i;
-//             // divElement.append(childSpanElement);
-//             divElement.append(text);
-
-//             divElement.classList.add('box');
-//             // divElement.classList.add(`box${i}`)
-
-//             document.body.appendChild(divElement);
-
-//         }
-//     }
-// });
-
-// btn.addEventListener('submit', function(e){
-//     e.preventDefault();
-//     res.innerText = inp.value;
-//     res1.innerText = inp1.value;
-// });
-
-// for(let i=0; i<noteArray.length; i++){
-//     res1.innerText = inp.value;
-//     noteArray.push(inp.value);
-//     console.log(noteArray);
-// }

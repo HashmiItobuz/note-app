@@ -6,22 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Note Layout</title>
     <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/6dc7929f7c.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <section class="container">
-      <div class="child title head">
-        <form id="btn">
-          <label>Title :
-          <input class="input input1" id="input-title" type="text" placeholder="Enter Title" name="text"/><br/></label>
-          <label>Content :
-          <input class="input" id="input-content" type="text" placeholder="Enter your Content" name="text1"/><br/></label>
-          <button id="button">Submit</button>
-        </form>
-      </div>
-    </section>
-    
+    <section class="note-container">
+      <section class="container">
+        <div class="child title head">
+          <form id="btn">
+            <div class="add-notes">
+            <div class="back-btn"><a href="index1.html"><i class="fa-solid fa-angle-left"></a></i></div>
+            <h4>Add Notes</h4>
+            <button class="button check"><i class="fa-solid fa-check"></i></button>
+            </div>
+            <label
+              >Title :
+              <input
+                class="input input1"
+                id="input-title"
+                type="text"
+                placeholder="Enter Title"
+                name="text" /><br
+            /></label>
+            <label
+              >Description :
+              <!-- <input class="input input2" id="input-content" type="" placeholder="Enter your Content" name="text1"/><br/></label> -->
+              <textarea
+                class="input input2"
+                id="input-content"
+                placeholder="Enter your Content"
+                name="text1"
+                rows="10"
+                cols="${}"
+              ></textarea
+              ><br
+            /></label>
+            <!-- <button class="button check"><i class="fa-solid fa-check"></i></button> -->
+            <!-- <div class="check button" ><i class="fa-solid fa-check"></i></div> -->
+          </form>
+        </div>
+      </section>
 
-    <section class="notes-preview"></section>
+      <section class="notes-preview"></section>
+    </section>
     <script src="script.js"></script>
   </body>
 </html>
