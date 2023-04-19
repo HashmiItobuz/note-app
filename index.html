@@ -11,40 +11,42 @@
       crossorigin="anonymous"
     ></script>
   </head>
+
   <body>
     <section class="note-container">
       <section class="container">
         <div class="child title head">
           <form id="btn">
             <div class="add-notes">
-            <div class="back-btn"><a href="index1.html"><i class="fa-solid fa-angle-left"></a></i></div>
-            <h4>Add Notes</h4>
-            <button class="button check"><i class="fa-solid fa-check"></i></button>
+              <div class="back-btn">
+                <a href="index1.html"><i class="fa-solid fa-angle-left"></i></a>
+              </div>
+              <h4>Add Notes</h4>
+              <button class="button check">
+                <i class="fa-solid fa-check"></i>
+              </button>
             </div>
-            <label
-              >Title :
+            <label>
+              Title :
               <input
-                class="input input1"
+                class="input"
                 id="input-title"
                 type="text"
                 placeholder="Enter Title"
-                name="text" /><br
-            /></label>
-            <label
-              >Description :
-              <!-- <input class="input input2" id="input-content" type="" placeholder="Enter your Content" name="text1"/><br/></label> -->
+                name="text"
+                required
+              />
+            </label>
+            <label>
+              Description :
               <textarea
-                class="input input2"
+                class="input"
                 id="input-content"
                 placeholder="Enter your Content"
                 name="text1"
                 rows="10"
-                cols="${}"
-              ></textarea
-              ><br
-            /></label>
-            <!-- <button class="button check"><i class="fa-solid fa-check"></i></button> -->
-            <!-- <div class="check button" ><i class="fa-solid fa-check"></i></div> -->
+              ></textarea>
+            </label>
           </form>
         </div>
       </section>
