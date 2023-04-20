@@ -11,15 +11,35 @@
 </head>
 
 <body>
-    <section class="header container">
+    <section class=" main-container hide" id="mainSection">
+        <div class="main">
+        <div class="main-title-header">
+            <button class="main-btn" ><img src="./img/back.svg" alt="back icon" height="25px" width="25px" id="backIcon"></button>
+            <label class="main-title">Add Items</label>
+            <button class="main-btn" id="createBtn"><img src="./img/check.svg" alt="check icon" height="25px" width="25px"></button>
+        </div>
+        <div class="add-notes">
+            <form action="">
+                <label for="title">Title:<input type="text" id="title" name="title" placeholder="Enter Title" class="input-box"/></label>
+                <label for="description">Description:<textarea id="description" placeholder="Enter your content" class="input-box" rows="10"></textarea></label>
+            </form>
+        </div>
+    </div>
+    </section>
+    <section class="header container " id="headerSection">
         <div class="header-title">All notes</div>
         <div class="search-container">
             <img class="search-icon"   src="./img/search.svg" alt="" />
             <input type="text" placeholder="Search notes" class="search-field" />
-            <img  src="./img/plus.svg" alt="" class="plus-icon" />
-        </div>
-        
+            <img  src="./img/plus.svg" alt="" class="plus-icon" id="addIcon" />
+        </div>  
+        <section class="notes-preview">
+
+        </section> 
     </section>
+
+   <!-- <section class="notes-preview"></section> -->
+
     <script src="./script/script.js"></script>
 </body>
 
