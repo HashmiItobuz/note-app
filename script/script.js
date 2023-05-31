@@ -1,6 +1,12 @@
 const addBtn = document.getElementById("addIcon");
 const mainPage = document.querySelectorAll(".main-container");
 const backBtn = document.getElementById("backIcon");
+const notesPreview = document.getElementsByClassName("notes-preview")[0];
+const inputTitle = document.getElementById("title");
+const inputContent = document.getElementById("description");
+const submit = document.getElementById("createBtn");
+
+const noteArray = [];
 
 addBtn.addEventListener("click", function () {
   mainPage[0].classList.remove("hide");
@@ -10,20 +16,13 @@ backBtn.addEventListener("click", function () {
   mainPage[0].classList.add("hide");
 });
 
-const notesPreview = document.getElementsByClassName("notes-preview")[0];
-const inputTitle = document.getElementById("title");
-const inputContent = document.getElementById("description");
-const submit = document.getElementById("createBtn");
-
-const noteArray = [];
-
 submit.addEventListener("click", function (e) {
   e.preventDefault();
 
-  if(inputTitle.value === "") {
+  if (inputTitle.value === "") {
     alert("Please Fill In All Required Fields");
     return false;
-  }else if(inputContent.value === "") {
+  } else if (inputContent.value === "") {
     alert("Please Fill In All Required Fields");
     return false;
   }
@@ -38,7 +37,7 @@ submit.addEventListener("click", function (e) {
   const content = {
     title: inputTitle.value,
     description: inputContent.value,
-    todaysDate: currentDate,
+    todaysDate: currentDate
   };
 
   noteArray.push(content);
