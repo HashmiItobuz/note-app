@@ -23,13 +23,12 @@ submit.addEventListener("click", function (e) {
   if(inputTitle.value === "") {
     alert("Please Fill In All Required Fields");
     return false;
-  }else if(inputContent.value === "")
-  {
+  }else if(inputContent.value === "") {
     alert("Please Fill In All Required Fields");
     return false;
   }
-  let date = new Date();
 
+  let date = new Date();
   let day = date.getDate();
   let month = date.getMonth() + 1;
   let year = date.getFullYear();
@@ -43,12 +42,10 @@ submit.addEventListener("click", function (e) {
   };
 
   noteArray.push(content);
-  console.log(noteArray);
   showNotes();
 
   function showNotes() {
     notesPreview.innerHTML = "";
-
     for (let i = 0; i < noteArray.length; i++) {
       let divElement = document.createElement("div");
       let titleText = noteArray[i].title;
