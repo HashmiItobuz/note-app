@@ -15,10 +15,9 @@ body {
   width: 30%;
   margin: auto;
   background-color: #f0e1f5;
-  min-height: 100vh;
+  min-height: 98vh;
   padding: 5px 20px;
   border-radius: 30px;
-  margin-top: 1rem;
 }
 
 .header {
